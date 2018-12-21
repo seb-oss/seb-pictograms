@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { IconsService } from './services/icons.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'seb-icons-app';
+
+  constructor(private iconsService: IconsService) {
+    console.log('icons', iconsService.icons);
+  }
 }
