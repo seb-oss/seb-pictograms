@@ -13,7 +13,7 @@
     { "names" : ["p12"] , "code" : "e90b" },
     { "names" : ["p13"] , "code" : "e90c" },
     { "names" : ["p14"] , "code" : "e90d" },
-    { "names" : ["p15"] , "code" : "e90e" },
+    { "names" : ["copy"] , "code" : "e90e" },
     { "names" : ["p16"] , "code" : "e90f" },
     { "names" : ["p17"] , "code" : "e910" },
     { "names" : ["p18"] , "code" : "e911" },
