@@ -1,5 +1,5 @@
 [
-    { "names" : ["p1"] , "code" : "e900" },
+    { "names" : ["p1", "icon-1"] , "code" : "e900" },
     { "names" : ["p2"] , "code" : "e901" },
     { "names" : ["p3"] , "code" : "e902" },
     { "names" : ["p4"] , "code" : "e903" },
