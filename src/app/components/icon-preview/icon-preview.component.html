@@ -1,8 +1,8 @@
 <h1>{{icon}}</h1>
 <section>
   <div class="form-check" *ngFor="let weightObj of fontWeights">
-    <input class="form-check-input" type="radio" name="fontWeight" [id]="weightObj.name" [value]="weightObj.type" [(ngModel)]="fontWeight">
-    <label class="form-check-label" [for]="weightObj.name">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="fontWeight" [value]="weightObj.type" [(ngModel)]="fontWeight">
       {{weightObj.name}}
     </label>
   </div>
