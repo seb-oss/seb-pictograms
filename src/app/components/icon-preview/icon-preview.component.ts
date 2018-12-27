@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, OnChanges, SimpleChanges, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'app-icon-preview',
@@ -6,7 +6,7 @@ import { Component, OnInit, ViewEncapsulation, OnChanges, SimpleChanges, Input }
   styleUrls: ['./icon-preview.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class IconPreviewComponent implements OnInit, OnChanges {
+export class IconPreviewComponent implements OnInit {
 
   @Input()
   icon: string;
@@ -14,16 +14,11 @@ export class IconPreviewComponent implements OnInit, OnChanges {
   readonly iconSizes = ['seb-size-5x', 'seb-size-3x', 'seb-size-2x', 'seb-size-lg', 'seb-size-sm', 'seb-size-xs'];
   readonly fontWeights = ['seb-icon', 'seb-light-icon'];
 
+  fontWeight: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.fontWeight = this.fontWeights[0];
   }
-
-  ngOnChanges(changes: SimpleChanges) {
-    console.log('changes', changes)
-    if (changes['icon']) {
-      console.log('icon', this.icon)
-    }
-  }
-
 }
