@@ -24,4 +24,32 @@ app-icon-preview {
     font-size: 6em;
   }
 
+  .highlight {
+    padding: 1.5rem;
+    background-color: #f7f7f9;
+    pre {
+      margin-bottom: 0;
+    }
+  }
+
+  .bd-clipboard {
+    display: block;
+    position: relative;
+    float: right;
+
+    .btn-clipboard {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      z-index: 10;
+      display: block;
+      padding: .25rem .5rem;
+      font-size: 75%;
+      color: #818a91;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      border-radius: .25rem;
+    }
+  }
 }
