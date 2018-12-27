@@ -1,18 +1,15 @@
 app-icon-preview {
-  .seb-size-xs {
-    font-size: 0.75em;
-  }
 
-  .seb-size-sm {
-    font-size: 0.875em;
-  }
-
-  .seb-size-lg {
-    font-size: 1.33em;
+  .seb-size-1x {
+    font-size: 1em;
   }
 
   .seb-size-2x {
     font-size: 2em;
+  }
+
+  .seb-size-4x {
+    font-size: 4em;
   }
 
   .seb-size-3x {
@@ -21,6 +18,10 @@ app-icon-preview {
 
   .seb-size-5x {
     font-size: 5em;
+  }
+
+  .seb-size-6x {
+    font-size: 6em;
   }
 
   .highlight {
