@@ -7,20 +7,12 @@ import { Subject, Observable } from 'rxjs';
 })
 export class DocumentService {
 
-  private documentClickSubject: Subject<MouseEvent>;
-
   constructor(
     @Inject(DOCUMENT) private dom: Document
   ) {
-    this.documentClickSubject = new Subject<MouseEvent>();
-    dom.addEventListener('click', (event) => {
-      this.documentClickSubject.next(event);
-    });
+
   }
 
-  get clickObservable(): Observable<MouseEvent> {
-    return this.documentClickSubject;
-  }
 
   public copy(value: string): Promise<string> {
     return new Promise<string>(

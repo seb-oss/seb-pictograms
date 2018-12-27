@@ -5,7 +5,7 @@ import { DOCUMENT } from '@angular/common';
 describe('DocumentService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DocumentService]
+      providers: [DocumentService],
     });
   });
 
@@ -43,14 +43,5 @@ describe('DocumentService', () => {
         });
     })();
   });
-  it('should trigger click', (done) => {
-    inject([DocumentService, DOCUMENT], (service: DocumentService, dom: any) => {
-      const sub = service.clickObservable.subscribe((event) => {
-        expect(event).toBeDefined();
-        sub.unsubscribe();
-        done();
-      });
-      dom.body.click();
-    })();
-  });
+
 });
