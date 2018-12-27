@@ -1,0 +1,10 @@
+<h1>Icons list</h1>
+<section class="icons">
+  <ng-container *ngFor="let icon of icons">
+    <a class="icon btn btn-primary" href="#" role="button" *ngFor="let name of icon.names; let i = index" [attr.data-index]="i">
+      <i class="seb-icon" [ngClass]="'seb-icon-' + name"></i>
+      <span>{{name}}</span>
+      <span>(alias)</span>
+    </a>
+  </ng-container>
+</section>

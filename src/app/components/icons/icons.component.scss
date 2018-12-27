@@ -1,0 +1,40 @@
+app-icons {
+    .icons {
+        .icon {
+            padding: 1.25rem 1.25rem;
+            line-height: 1;
+            width: 25%;
+            min-width: 240px;
+            text-align: left;
+            font-weight: 400;
+            span {
+                padding-left: .25rem;
+                display: inline-block;
+                vertical-align: top;
+                padding-top: 0;
+                &:nth-child(3) {
+                    opacity: 0.5;
+                }
+            }
+            &:not(:hover):not(:active) {
+                background-color: transparent;
+                border-color: transparent;
+                color: #000;
+            }
+            &:hover {
+                padding: 0.25rem 0.50rem;
+                i.seb-icon {
+                    font-size: 3rem;
+                }
+                span {
+                    padding-top: 1rem;
+                }
+            }
+            &[data-index="0"] {
+                span:last-child{
+                    display: none;
+                }
+            }
+        }
+    }
+}
