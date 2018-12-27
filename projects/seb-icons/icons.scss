@@ -1,24 +1,25 @@
 @font-face {
     font-family: 'seb-icons';
-    src:  url('fonts/seb-icons.eot?a7zwa4');
-    src:  url('fonts/seb-icons.eot?a7zwa4#iefix') format('embedded-opentype'),
-      url('fonts/seb-icons.ttf?a7zwa4') format('truetype'),
-      url('fonts/seb-icons.woff?a7zwa4') format('woff'),
-      url('fonts/seb-icons.svg?a7zwa4#icomoon') format('svg');
+    src: url('fonts/seb-icons.eot?a7zwa4');
+    src: url('fonts/seb-icons.eot?a7zwa4#iefix') format('embedded-opentype'),
+         url('fonts/seb-icons.ttf?a7zwa4') format('truetype'),
+         url('fonts/seb-icons.woff?a7zwa4') format('woff'),
+         url('fonts/seb-icons.svg?a7zwa4#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'seb-light-icons';
-    src:  url('fonts/seb-light-icons.eot?a7zwa4');
-    src:  url('fonts/seb-light-icons.eot?a7zwa4#iefix') format('embedded-opentype'),
-      url('fonts/seb-light-icons.ttf?a7zwa4') format('truetype'),
-      url('fonts/seb-light-icons.woff?a7zwa4') format('woff'),
-      url('fonts/seb-light-icons.svg?a7zwa4#icomoon') format('svg');
+    src: url('fonts/seb-light-icons.eot?a7zwa4');
+    src: url('fonts/seb-light-icons.eot?a7zwa4#iefix') format('embedded-opentype'),
+         url('fonts/seb-light-icons.ttf?a7zwa4') format('truetype'),
+         url('fonts/seb-light-icons.woff?a7zwa4') format('woff'),
+         url('fonts/seb-light-icons.svg?a7zwa4#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
-  }
+}
+
 .seb-light-icon,
 .seb-icon {
     speak: none;

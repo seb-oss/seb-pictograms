@@ -1,0 +1,10 @@
+<h1>{{icon}}</h1>
+<section>
+  <div *ngFor="let fontWeight of fontWeights">
+    <ul class="list-inline">
+      <li *ngFor="let iconSize of iconSizes;" class="list-inline-item">
+        <i [class]="fontWeight + ' ' + icon + ' ' + iconSize"></i>
+      </li>
+    </ul>
+  </div>
+</section>
