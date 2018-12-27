@@ -9,7 +9,6 @@ import { IconsService } from './services/icons.service';
 })
 export class AppComponent {
 
-  constructor(private iconsService: IconsService) {
-    console.log('icons', iconsService.icons);
+  constructor() {
   }
 }
