@@ -14,7 +14,7 @@ export class IconPreviewComponent implements OnInit, OnDestroy {
 
   icon: string;
 
-  readonly iconSizes = ['seb-size-5x', 'seb-size-3x', 'seb-size-2x', 'seb-size-lg', 'seb-size-sm', 'seb-size-xs'];
+  readonly iconSizes = ['seb-size-7x', 'seb-size-6x', 'seb-size-5x', 'seb-size-3x', 'seb-size-2x', 'seb-size-1x'];
   readonly fontWeights = [{ type: 'seb-icon', name: 'Regular' }, { type: 'seb-light-icon', name: 'Light' }];
 
   fontWeight: string;
