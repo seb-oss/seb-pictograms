@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation, Input, OnDestroy } from '@angular/core';
-import { ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
+import { Component, OnInit, ViewEncapsulation, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { DocumentService } from 'src/app/services/document.service';
 
 
 @Component({
@@ -11,7 +12,6 @@ import { Subscription } from 'rxjs';
 })
 export class IconPreviewComponent implements OnInit, OnDestroy {
 
-
   icon: string;
 
   readonly iconSizes = ['seb-size-5x', 'seb-size-3x', 'seb-size-2x', 'seb-size-lg', 'seb-size-sm', 'seb-size-xs'];
@@ -19,9 +19,15 @@ export class IconPreviewComponent implements OnInit, OnDestroy {
 
   fontWeight: string;
 
+  @ViewChild('code')
+  code: ElementRef;
+
   private componentSubscriptions: Subscription[];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private doc: DocumentService,
+  ) { }
 
   ngOnInit() {
     this.fontWeight = this.fontWeights[0].type;
@@ -34,5 +40,9 @@ export class IconPreviewComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.componentSubscriptions.forEach(s => s.unsubscribe());
+  }
+
+  copyIconCode() {
+    this.doc.copy(this.code.nativeElement.innerText);
   }
 }
