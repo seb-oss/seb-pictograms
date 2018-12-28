@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "seb-icons-scss": "json-to-scss projects/seb-icons/data.json",
+    "seb-icons:data": "json-to-scss projects/seb-icons/data.json",
+    "seb-icons:compile": "node-sass --output-style=compressed projects/seb-icons/icons.scss projects/seb-icons/icons.css",
+    "seb-icons:pack": "npm run seb-icons:data && npm run seb-icons:compile", 
     "github-pages:deploy": "env-cmd .env npx angular-cli-ghpages --dir=dist/seb-icons-app --repo=https://GH_TOKEN@github.com/sebgroup/seb-icons.git --no-silent"
   },
   "private": true,
