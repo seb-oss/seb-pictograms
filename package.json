@@ -10,8 +10,10 @@
     "e2e": "ng e2e",
     "seb-pictograms:data": "json-to-scss projects/seb-pictograms/data.json",
     "seb-pictograms:compile": "node-sass --output-style=compressed projects/seb-pictograms/pictograms.scss projects/seb-pictograms/pictograms.css",
-    "seb-pictograms:pack": "npm run seb-pictograms:data && npm run seb-pictograms:compile", 
-    "github-pages:deploy": "env-cmd .env npx angular-cli-ghpages --dir=dist/seb-pictograms-app --repo=https://GH_TOKEN@github.com/sebgroup/seb-pictograms.git --no-silent"
+    "seb-pictograms:pack": "npm run seb-pictograms:data && npm run seb-pictograms:compile",
+    "github-pages:deploy": "env-cmd .env npx angular-cli-ghpages --dir=dist/seb-pictograms-app --repo=https://GH_TOKEN@github.com/sebgroup/seb-pictograms.git --no-silent",
+    "travis-deploy-once": "travis-deploy-once --pro",
+    "semantic-release": "cd projects/seb-pictograms && semantic-release"
   },
   "private": true,
   "dependencies": {
@@ -50,6 +52,8 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
+    "semantic-release": "^15.13.2",
+    "travis-deploy-once": "^5.0.11",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
