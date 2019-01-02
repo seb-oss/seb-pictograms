@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { IconsService } from './services/icons.service';
 
 @Component({
   selector: 'app-root',
