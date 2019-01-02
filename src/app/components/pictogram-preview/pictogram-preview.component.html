@@ -1,4 +1,4 @@
-<h1>Icon {{icon}}</h1>
+<h1>Pictogram {{pictogram}}</h1>
 <section>
   <div class="form-check" *ngFor="let weightObj of fontWeights">
     <label class="form-check-label">
@@ -9,16 +9,16 @@
 </section>
 <section>
   <ul class="list-inline">
-    <li *ngFor="let iconSize of iconSizes;" class="list-inline-item">
-      <i [ngClass]="[fontWeight, 'seb-icon-' + icon, iconSize]"></i>
+    <li *ngFor="let pictogramSize of pictogramSizes;" class="list-inline-item">
+      <i [ngClass]="[fontWeight, 'seb-pictogram-' + pictogram, pictogramSize]"></i>
     </li>
   </ul>
 </section>
 <section>
   <div class="bd-clipboard">
-    <button class="btn-clipboard" title="Copy to clipboard" (click)="copyIconCode()"> Copy</button>
+    <button class="btn-clipboard" title="Copy to clipboard" (click)="copyPictogramCode()">Copy</button>
   </div>
   <div class="highlight">
-    <pre><code #code>&lt;i class="{{fontWeight}} seb-icon-{{icon}}"&gt;&lt;/i&gt;</code></pre>
+    <pre><code #code>&lt;i class="{{fontWeight}} seb-pictogram-{{pictogram}}"&gt;&lt;/i&gt;</code></pre>
   </div>
 </section>

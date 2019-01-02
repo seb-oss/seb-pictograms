@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { IconsService } from './icons.service';
+import { PictogramsService } from './pictograms.service';
 
-describe('IconsService', () => {
+describe('PictogramsService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
-  let service: IconsService;
+  let service: PictogramsService;
   beforeEach(() => {
 
     TestBed.configureTestingModule({
-      providers: [IconsService],
+      providers: [PictogramsService],
     });
-    service = TestBed.get(IconsService);
+    service = TestBed.get(PictogramsService);
   });
 
   it('should be created', () => {

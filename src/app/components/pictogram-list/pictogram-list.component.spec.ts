@@ -1,30 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconsComponent } from './icons.component';
+import { PictogramListComponent } from './pictogram-list.component';
 import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
-import { IconsService } from 'src/app/services/icons.service';
+import { PictogramsService } from 'src/app/services/pictograms.service';
 
-const iconsServiceMock = {
-  icons: [],
+const pictogramsServiceMock = {
+  pictogram: [],
 };
 
 describe('IconsComponent', () => {
-  let component: IconsComponent;
-  let fixture: ComponentFixture<IconsComponent>;
+  let component: PictogramListComponent;
+  let fixture: ComponentFixture<PictogramListComponent>;
 
   beforeEach((done) => {
     TestBed.configureTestingModule({
-      declarations: [IconsComponent],
+      declarations: [PictogramListComponent],
       imports: [FormsModule, RouterTestingModule.withRoutes([])],
-      providers: [ { provide: IconsService, useValue: iconsServiceMock } ],
+      providers: [ { provide: PictogramsService, useValue: pictogramsServiceMock } ],
     })
       .compileComponents()
       .then(done);
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IconsComponent);
+    fixture = TestBed.createComponent(PictogramListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
