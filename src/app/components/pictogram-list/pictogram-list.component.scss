@@ -1,6 +1,6 @@
-app-icons {
-    .icons {
-        .icon {
+app-pictogram-list {
+    .pictograms {
+        .pictogram {
             padding: 1.25rem 1.25rem;
             line-height: 1;
             width: 25%;
@@ -10,11 +10,15 @@ app-icons {
             span {
                 padding-left: .25rem;
                 display: inline-block;
-                vertical-align: top;
+                vertical-align: middle;
                 padding-top: 0;
                 &:nth-child(3) {
                     opacity: 0.5;
                 }
+            }
+            i.seb-pictogram {
+                font-size: 32px;
+                vertical-align: middle;
             }
             &:not(:hover):not(:active) {
                 background-color: transparent;
@@ -23,11 +27,8 @@ app-icons {
             }
             &:hover {
                 padding: 0.25rem 0.50rem;
-                i.seb-icon {
-                    font-size: 3rem;
-                }
-                span {
-                    padding-top: 1rem;
+                i.seb-pictogram {
+                    font-size: 64px;
                 }
             }
             &[data-index="0"] {

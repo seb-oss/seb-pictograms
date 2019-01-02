@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "seb-icons-app": {
+    "seb-pictograms-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/seb-icons-app",
+            "outputPath": "dist/seb-pictograms-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,7 +29,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "projects/seb-icons/icons.scss"
+              "projects/seb-pictograms/pictograms.scss"
             ],
             "scripts": []
           },
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "seb-icons-app:build"
+            "browserTarget": "seb-pictograms-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "seb-icons-app:build:production"
+              "browserTarget": "seb-pictograms-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "seb-icons-app:build"
+            "browserTarget": "seb-pictograms-app:build"
           }
         },
         "test": {
@@ -108,7 +108,7 @@
         }
       }
     },
-    "seb-icons-app-e2e": {
+    "seb-pictograms-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -117,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "seb-icons-app:serve"
+            "devServerTarget": "seb-pictograms-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "seb-icons-app:serve:production"
+              "devServerTarget": "seb-pictograms-app:serve:production"
             }
           }
         },
@@ -137,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "seb-icons-app"
+  "defaultProject": "seb-pictograms-app"
 }
