@@ -1,4 +1,5 @@
 {
   "name": "@sebgroup/seb-pictograms",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "private" : false
 }
