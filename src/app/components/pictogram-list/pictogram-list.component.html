@@ -1,0 +1,13 @@
+<h1>List</h1>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="filter" aria-label="filter" [(ngModel)]="filter" (ngModelChange)="onFilterChange()">
+  </div>
+<section class="pictograms">
+  <ng-container *ngFor="let pictogram of pictograms">
+    <a class="pictogram btn btn-primary" [routerLink]="name" role="button" *ngFor="let name of pictogram.names; let i = index" [attr.data-index]="i">
+      <i class="seb-pictogram" [ngClass]="'seb-pictogram-' + name"></i>
+      <span>{{name}}</span>
+      <span>(alias)</span>
+    </a>
+  </ng-container>
+</section>

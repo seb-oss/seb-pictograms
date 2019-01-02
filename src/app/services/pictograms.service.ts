@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
 
-import data from './../../../projects/seb-icons/data.json';
+import data from './../../../projects/seb-pictograms/data.json';
 
 @Injectable({
   providedIn: 'root'
 })
-export class IconsService {
+export class PictogramsService {
 
-  private _icons: Icon[];
+  private _pictograms: Pictogram[];
 
   constructor() { }
 
-  get icons() {
-    if (!this._icons) {
-      this._icons = data.sort(this.sortIcon.bind(this));
+  get pictograms() {
+    if (!this._pictograms) {
+      this._pictograms = data.sort(this.comparePictogram.bind(this));
     }
-    return this._icons;
+    return this._pictograms;
   }
 
-  private sortIcon(a: Icon, b: Icon) {
+  private comparePictogram(a: Pictogram, b: Pictogram) {
     return this.sortString(a.names[0], b.names[0]);
   }
 
@@ -33,7 +33,7 @@ export class IconsService {
   }
 }
 
-export interface Icon {
+export interface Pictogram {
   readonly names: string[];
   readonly code: string;
 }

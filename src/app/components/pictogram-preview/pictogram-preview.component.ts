@@ -5,17 +5,17 @@ import { DocumentService } from 'src/app/services/document.service';
 
 
 @Component({
-  selector: 'app-icon-preview',
-  templateUrl: './icon-preview.component.html',
-  styleUrls: ['./icon-preview.component.scss'],
+  selector: 'app-pictogram-preview',
+  templateUrl: './pictogram-preview.component.html',
+  styleUrls: ['./pictogram-preview.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class IconPreviewComponent implements OnInit, OnDestroy {
+export class PictogramPreviewComponent implements OnInit, OnDestroy {
 
-  icon: string;
+  pictogram: string;
 
-  readonly iconSizes = ['seb-size-6x', 'seb-size-5x', 'seb-size-4x', 'seb-size-3x', 'seb-size-2x', 'seb-size-1x'];
-  readonly fontWeights = [{ type: 'seb-icon', name: 'Regular' }, { type: 'seb-light-icon', name: 'Light' }];
+  readonly pictogramSizes = ['seb-size-6x', 'seb-size-5x', 'seb-size-4x', 'seb-size-3x', 'seb-size-2x', 'seb-size-1x'];
+  readonly fontWeights = [{ type: 'seb-pictogram', name: 'Regular' }, { type: 'seb-light-pictogram', name: 'Light' }];
 
   fontWeight: string;
 
@@ -34,7 +34,7 @@ export class IconPreviewComponent implements OnInit, OnDestroy {
     this.componentSubscriptions = [];
     this.componentSubscriptions.push(
       this.route.params.subscribe(params => {
-        this.icon = params.icon;
+        this.pictogram = params.pictogram;
       }));
   }
 
@@ -42,7 +42,7 @@ export class IconPreviewComponent implements OnInit, OnDestroy {
     this.componentSubscriptions.forEach(s => s.unsubscribe());
   }
 
-  copyIconCode() {
+  copyPictogramCode() {
     this.doc.copy(this.code.nativeElement.innerText);
   }
 }
