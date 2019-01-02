@@ -1,27 +1,27 @@
-app-icon-preview {
+app-pictogram-preview {
 
   .seb-size-1x {
-    font-size: 1em;
+    font-size: 32px;
   }
 
   .seb-size-2x {
-    font-size: 2em;
-  }
-
-  .seb-size-4x {
-    font-size: 4em;
+    font-size: 38px;
   }
 
   .seb-size-3x {
-    font-size: 3em;
+    font-size: 44px;
+  }
+
+  .seb-size-4x {
+    font-size: 50px;
   }
 
   .seb-size-5x {
-    font-size: 5em;
+    font-size: 56px;
   }
 
   .seb-size-6x {
-    font-size: 6em;
+    font-size: 62px;
   }
 
   .highlight {
@@ -50,6 +50,23 @@ app-icon-preview {
       background-color: transparent;
       border: 0;
       border-radius: .25rem;
+    }
+  }
+  @media only screen and (min-width: 240px) {
+    .seb-size-1x,.seb-size-2x,.seb-size-3x {
+      display: none
+    }
+  }
+
+  @media only screen and (min-width: 320px) {
+    .seb-size-2x,.seb-size-3x {
+      display: initial;
+    }
+  }
+
+  @media only screen and (min-width: 360px) {
+    .seb-size-1x {
+      display: initial;
     }
   }
 }
