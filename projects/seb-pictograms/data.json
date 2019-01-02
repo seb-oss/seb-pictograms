@@ -5,7 +5,7 @@
     { "names" : ["card-out"] , "code" : "e903" },
     { "names" : ["cash-out"] , "code" : "e904" },
     { "names" : ["car"] , "code" : "e905" },
-    { "names" : ["check", "done"] , "code" : "e906" },
+    { "names" : ["check"] , "code" : "e906" },
     { "names" : ["book"] , "code" : "e907" },
     { "names" : ["building"] , "code" : "e908" },
     { "names" : ["list"] , "code" : "e909" },
