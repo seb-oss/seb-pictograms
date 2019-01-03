@@ -17,7 +17,7 @@
     { "names" : ["shower"] , "code" : "e90f" },
     { "names" : ["no-cash"] , "code" : "e910" },
     { "names" : ["woman"] , "code" : "e911" },
-    { "names" : ["letter", "envelope"] , "code" : "e912" },
+    { "names" : ["envelope", "mail", "letter"] , "code" : "e912" },
     { "names" : ["phone"] , "code" : "e913" },
     { "names" : ["flag"] , "code" : "e914" },
     { "names" : ["community"] , "code" : "e915" },
