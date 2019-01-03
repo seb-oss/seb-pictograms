@@ -11,7 +11,7 @@
     "seb-pictograms:data": "json-to-scss projects/seb-pictograms/data.json",
     "seb-pictograms:compile": "node-sass --output-style=compressed projects/seb-pictograms/pictograms.scss projects/seb-pictograms/pictograms.css",
     "seb-pictograms:docs": "copyfiles README.md LICENSE.md projects/seb-pictograms",
-    "seb-pictograms:pack": "npm run seb-pictograms:data && npm run seb-pictograms:compile && seb-pictograms:docs",
+    "seb-pictograms:pack": "npm run seb-pictograms:data && npm run seb-pictograms:compile && npm run seb-pictograms:docs",
     "github-pages:deploy": "env-cmd .env npx angular-cli-ghpages --dir=dist/seb-pictograms-app --repo=https://GH_TOKEN@github.com/sebgroup/seb-pictograms.git --no-silent",
     "travis-deploy-once": "travis-deploy-once --pro",
     "semantic-release": "cd projects/seb-pictograms && semantic-release"
