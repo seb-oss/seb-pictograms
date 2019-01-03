@@ -4,6 +4,9 @@
 /dist
 /tmp
 /out-tsc
+/projects/seb-pictograms/README.md
+/projects/seb-pictograms/LICENSE.md
+/projects/seb-pictograms/pictograms.css
 
 # dependencies
 /node_modules

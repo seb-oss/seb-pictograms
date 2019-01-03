@@ -1,8 +1,13 @@
 {
   "name": "@sebgroup/seb-pictograms",
-  "version": "0.0.0",
+  "version": "0.0.0-semantically-released",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebgroup/seb-pictograms.git"
+  },
+  "license": "Apache-2.0"
 }
