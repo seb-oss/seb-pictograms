@@ -6,7 +6,7 @@ This is CSS font library for SEB style pictograms that are provided in SEB Desig
 
 According to SEB Design Library guidelines, these pictograms are differentiated from icons and should be used from 32px size (and up).
 
-[Demo app](https://sebgroup.github.io/seb-pictograms/#/)
+[Demo app](https://sebgroup.github.io/seb-pictograms/)
 
 ## Installation
 
