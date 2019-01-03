@@ -17,3 +17,7 @@ npm install @sebgroup/seb-pictograms
 Angular demo application is available.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Releasing
+
+The library is released via [semantic-release](https://www.npmjs.com/package/semantic-release).
