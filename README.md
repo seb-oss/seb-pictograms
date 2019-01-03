@@ -25,7 +25,7 @@ Installed NPM package includes:
 * raw SVG files
 * fonts built from SVG files
 
-To use these icons, include them in your preferred way to your project.
+To use these pictograms, include them in your preferred way to your project.
 
 ## Development server
 
