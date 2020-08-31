@@ -1,3 +1,6 @@
+// Using 'imagemin' and its plugin 'imageminSvgo' to optimize and compress svg files
+// For more info visit -> https://www.npmjs.com/package/imagemin-svgo
+
 const imagemin = require('imagemin');
 const imageminSvgo = require('imagemin-svgo');
 const { readdirSync } = require('fs');
