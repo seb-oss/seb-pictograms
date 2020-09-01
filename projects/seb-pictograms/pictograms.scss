@@ -1,21 +1,23 @@
 @font-face {
     font-family: 'seb-pictograms';
-    src: url('fonts/seb-pictograms.eot?a7zwa4');
-    src: url('fonts/seb-pictograms.eot?a7zwa4#iefix') format('embedded-opentype'),
+    src: url('fonts/seb-pictograms.eot');
+    src: url('fonts/seb-pictograms.eot?#iefix') format('embedded-opentype'),
          url('fonts/seb-pictograms.ttf?a7zwa4') format('truetype'),
-         url('fonts/seb-pictograms.woff?a7zwa4') format('woff'),
-         url('fonts/seb-pictograms.svg?a7zwa4#icomoon') format('svg');
+         url('fonts/seb-pictograms.woff2') format('woff2'),
+         url('fonts/seb-pictograms.woff') format('woff'),
+         url('fonts/seb-pictograms.svg#seb-iconsregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'seb-light-pictograms';
-    src: url('fonts/seb-light-pictograms.eot?a7zwa4');
-    src: url('fonts/seb-light-pictograms.eot?a7zwa4#iefix') format('embedded-opentype'),
+    src: url('fonts/seb-light-pictograms.eot');
+    src: url('fonts/seb-light-pictograms.eot?#iefix') format('embedded-opentype'),
          url('fonts/seb-light-pictograms.ttf?a7zwa4') format('truetype'),
-         url('fonts/seb-light-pictograms.woff?a7zwa4') format('woff'),
-         url('fonts/seb-light-pictograms.svg?a7zwa4#icomoon') format('svg');
+         url('fonts/seb-light-pictograms.woff2') format('woff2'),
+         url('fonts/seb-light-pictograms.woff') format('woff'),
+         url('fonts/seb-light-pictograms.svg#seb-light-iconsregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -28,7 +30,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

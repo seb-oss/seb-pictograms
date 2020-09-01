@@ -13,8 +13,8 @@ const directoryNames = getDirectories
 
 // loop through the dir names and compress their contents
 directoryNames.forEach((dir) => {
-  (async () => {
-    await imagemin([`../svg/${dir}/*.svg`], {
+  (() => {
+     imagemin([`../svg/${dir}/*.svg`], {
       destination: `../svg/${dir}`,
       plugins: [
         imageminSvgo({
