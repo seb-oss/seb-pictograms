@@ -17,6 +17,11 @@ const imageDirPath = resolve(__dirname, '../svg/light');
 // Get an array of the files inside the folder
 const files = readdirSync(imageDirPath);
 
+// Sort the array
+files.sort(function(a, b){
+  return a.split("-")[0] - b.split("-")[0];
+});
+
 // Loop through each file and rename
 files.forEach((fileName, indx) => rename(
   imageDirPath + `/${fileName}`,
