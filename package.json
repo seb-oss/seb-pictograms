@@ -27,7 +27,7 @@
     "@angular/platform-browser": "~10.2.5",
     "@angular/platform-browser-dynamic": "~10.2.5",
     "@angular/router": "~10.2.5",
-    "@ng-bootstrap/ng-bootstrap": "^6.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^8.0.4",
     "@sebgroup/bootstrap": "^6.0.1",
     "core-js": "^2.5.4",
     "imagemin": "^7.0.1",
