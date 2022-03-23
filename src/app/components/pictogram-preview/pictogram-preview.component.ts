@@ -19,7 +19,7 @@ export class PictogramPreviewComponent implements OnInit, OnDestroy {
 
   fontWeight: string;
 
-  @ViewChild('code')
+  @ViewChild('code', { static: true })
   code: ElementRef;
 
   private componentSubscriptions: Subscription[];
