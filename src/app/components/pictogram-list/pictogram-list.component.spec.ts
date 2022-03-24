@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { PictogramsService } from 'src/app/services/pictograms.service';
 
 const pictogramsServiceMock = {
-  pictogram: [],
+  pictograms: [],
 };
 
 describe('IconsComponent', () => {

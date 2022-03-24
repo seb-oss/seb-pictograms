@@ -21,6 +21,7 @@ describe('DocumentService', () => {
       });
     })();
   });
+  
   it('should reject copy method (execCommand)', (done) => {
     inject([DocumentService, DOCUMENT], (service: DocumentService, dom: any) => {
       dom.execCommand = () => { throw Error('no command'); };
