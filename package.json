@@ -15,7 +15,9 @@
     "seb-pictograms:pack": "npm run seb-pictograms:data && npm run seb-pictograms:compile && npm run seb-pictograms:docs",
     "github-pages:deploy": "env-cmd .env npx angular-cli-ghpages --dir=dist/seb-pictograms-app --repo=https://GH_TOKEN@github.com/sebgroup/seb-pictograms.git --no-silent",
     "travis-deploy-once": "travis-deploy-once --pro",
-    "semantic-release": "cd projects/seb-pictograms && semantic-release"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "prepare": "husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks"
   },
   "private": true,
   "dependencies": {
@@ -44,13 +46,17 @@
     "@angular/cli": "~13.3.0",
     "@angular/compiler-cli": "~13.3.0",
     "@angular/language-service": "~13.3.0",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "^5.1.2",
+    "commitizen": "^4.2.4",
     "copyfiles": "^2.1.0",
     "env-cmd": "^8.0.2",
+    "husky": "^7.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "json-to-scss": "^1.3.1",
@@ -61,9 +67,38 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "karma-mocha-reporter": "^2.2.5",
     "protractor": "~7.0.0",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^17.4.7",
+    "shx": "^0.3.4",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
     "typescript": "~4.6.2"
+  },
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "dist/ng-debug/"
+        }
+      ]
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
