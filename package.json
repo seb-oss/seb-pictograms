@@ -6,60 +6,99 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test:ci": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "seb-pictograms:data": "json-to-scss projects/seb-pictograms/data.json",
-    "seb-pictograms:compile": "node-sass --output-style=compressed projects/seb-pictograms/pictograms.scss projects/seb-pictograms/pictograms.css",
+    "seb-pictograms:compile": "sass --style=compressed projects/seb-pictograms/pictograms.scss projects/seb-pictograms/pictograms.css",
     "seb-pictograms:docs": "copyfiles README.md LICENSE.md projects/seb-pictograms",
     "seb-pictograms:pack": "npm run seb-pictograms:data && npm run seb-pictograms:compile && npm run seb-pictograms:docs",
     "github-pages:deploy": "env-cmd .env npx angular-cli-ghpages --dir=dist/seb-pictograms-app --repo=https://GH_TOKEN@github.com/sebgroup/seb-pictograms.git --no-silent",
     "travis-deploy-once": "travis-deploy-once --pro",
-    "semantic-release": "cd projects/seb-pictograms && semantic-release"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "prepare": "husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~7.1.0",
-    "@angular/common": "~7.1.0",
-    "@angular/compiler": "~7.1.0",
-    "@angular/core": "~7.1.0",
-    "@angular/forms": "~7.1.0",
-    "@angular/platform-browser": "~7.1.0",
-    "@angular/platform-browser-dynamic": "~7.1.0",
-    "@angular/router": "~7.1.0",
-    "@ng-bootstrap/ng-bootstrap": "^4.0.1",
-    "@sebgroup/bootstrap": "^2.4.1",
+    "@angular/animations": "~13.3.0",
+    "@angular/common": "~13.3.0",
+    "@angular/compiler": "~13.3.0",
+    "@angular/core": "~13.3.0",
+    "@angular/forms": "~13.3.0",
+    "@angular/localize": "^13.3.0",
+    "@angular/platform-browser": "~13.3.0",
+    "@angular/platform-browser-dynamic": "~13.3.0",
+    "@angular/router": "~13.3.0",
+    "@ng-bootstrap/ng-bootstrap": "^12.0.1",
+    "@popperjs/core": "^2.11.4",
+    "@sebgroup/bootstrap": "^6.0.1",
+    "@types/popper.js": "^1.11.0",
     "core-js": "^2.5.4",
     "imagemin": "^7.0.1",
     "imagemin-svgo": "^8.0.0",
-    "rxjs": "~6.3.3",
-    "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "rxjs": "~6.6.7",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.13.10",
-    "@angular/cli": "~7.1.4",
-    "@angular/compiler-cli": "~7.1.0",
-    "@angular/language-service": "~7.1.0",
+    "@angular-devkit/build-angular": "~13.3.0",
+    "@angular/cli": "~13.3.0",
+    "@angular/compiler-cli": "~13.3.0",
+    "@angular/language-service": "~13.3.0",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
+    "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^0.5.3",
-    "codelyzer": "~4.5.0",
+    "codelyzer": "^5.1.2",
+    "commitizen": "^4.2.4",
     "copyfiles": "^2.1.0",
     "env-cmd": "^8.0.2",
-    "jasmine-core": "~2.99.1",
-    "jasmine-spec-reporter": "~4.2.1",
+    "husky": "^7.0.0",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
     "json-to-scss": "^1.3.1",
-    "karma": "~3.1.1",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.4.0",
-    "semantic-release": "^17.1.1",
-    "travis-deploy-once": "^5.0.11",
+    "karma": "~6.3.17",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "protractor": "~7.0.0",
+    "semantic-release": "^17.4.7",
+    "shx": "^0.3.4",
     "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "tslint": "~6.1.0",
+    "typescript": "~4.6.2"
+  },
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "dist/ng-debug/"
+        }
+      ]
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

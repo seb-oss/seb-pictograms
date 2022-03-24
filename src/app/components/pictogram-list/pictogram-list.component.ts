@@ -21,6 +21,7 @@ export class PictogramListComponent implements OnInit {
   }
 
   get pictograms() {
+    console.log('pictograms')
     if (!this._pictograms) {
       const filter = this.filter.toLowerCase();
       this._pictograms = this.pictogramsService.pictograms
