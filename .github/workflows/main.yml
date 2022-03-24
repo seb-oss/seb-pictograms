@@ -1,0 +1,50 @@
+name: Angular GitHub CI/CD
+on:
+  push:
+    branches: [ master ]
+ 
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+
+      - name: Pack
+        run: |
+          npm run seb-pictograms:pack
+
+      - name: Build
+        run: |
+          npm run build -- --configuration production
+
+      - name: Preparing to publish
+        run: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        env:
+          CI: true
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Run semantic release and publish new version to npm
+        run: npm run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Deploy to Github pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: ./dist/seb-pictograms-app
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
