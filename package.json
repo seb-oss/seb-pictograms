@@ -67,7 +67,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "karma-mocha-reporter": "^2.2.5",
     "protractor": "~7.0.0",
-    "semantic-release": "^17.4.7",
+    "semantic-release": "^19.0.3",
     "shx": "^0.3.4",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
