@@ -51,7 +51,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "angular-cli-ghpages": "^0.5.3",
+    "angular-cli-ghpages": "^1.0.5",
     "codelyzer": "^5.1.2",
     "commitizen": "^4.2.4",
     "copyfiles": "^2.1.0",
